@@ -6,24 +6,26 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
-<style type="text/css">
-#dom {
-  width:100px;
-  height:300px;
-  background:pink;
-}
-</style>
-<div id="dom"></div>
+<ul></ul>
 <script type="text/javascript">
-var dom = document.querySelector('div');
+var dom1 = document.querySelector('#dom1');
+var dom2 = document.querySelector('#dom2');
+var dom3 = document.querySelector('#dom3');
+var ul = document.querySelector('ul');
 document.addEventListener('touchmove', function(e){
-	dom.innerHTML = 'touchmove:拖动（手指在触摸屏上移动）';
+	var li = document.createElement('li');
+	li.innerHTML = 'touchmove:拖动（手指在触摸屏上移动）';
+	ul.appendChild(li);
 }, false);
 document.addEventListener('touchstart', function(e){
-	dom.innerHTML = 'touchstart:触摸开始（手指放在触摸屏上）';
+	var li = document.createElement('li');
+	li.innerHTML =  'touchstart:触摸开始（手指放在触摸屏上）';
+	ul.appendChild(li);
 }, false);
 document.addEventListener('touchend', function(e){
-	dom.innerHTML = 'touchend:触摸结束（手指从触摸屏上移开）';
+	var li = document.createElement('li');
+	li.innerHTML =  'touchend:触摸结束（手指从触摸屏上移开）';
+	ul.appendChild(li);
 }, false);
 </script>
 </body>
