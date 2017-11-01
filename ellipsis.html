@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.p1{
+			width:100px;
+			overflow: hidden;
+			text-overflow:ellipsis;
+			white-space: nowrap; 
+		}
+		.p2{
+			height:87px;
+			width:100px;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 4;
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<p class="p1">p标签p标签p标签p标签p标签p标签p标签</p>
+	<div class="p2">p标签p标签p标签p标签p标签p标签p标签标签p标签p标签p标签p标签p标签p标签</div>
+</body>
+</html>
